@@ -2,7 +2,7 @@
 
  Jenkins starts on port 8080 by default
  
- Two ways to install and run Jenkins: 
+ > Two ways to install and run Jenkins: 
   - install the Jenkins app on the OS directly
   - run Jenkins image and start Jenkins as a docker container
 
@@ -15,7 +15,7 @@
   - we will run Jenkins's official image to start Jenkins on the Ubuntu server
     
   - For this, we need the installation of docker on the server
-  - sudo apt update
+  - `sudo apt update`
   - sudo apt install docker.io
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/99c93d15-0b45-4d36-bcda-8886b79e6c9d)
     
