@@ -1,6 +1,6 @@
 ### Jenkins-demo
 
- Jenkins application starts on port 8080
+ Jenkins starts on port 8080 by default
  
  Two ways to install and run Jenkins: 
   - install the Jenkins app on the OS directly
@@ -71,18 +71,18 @@
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/cff0e8b0-d9ce-49d5-a646-96fdaba0fad4)
      - we can see the console output on clicking that tab
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/b8f3dd28-9cbc-437d-8519-74173c4ad79c)
-     - integrate with GitHub account to start the build process as soon as changes are committed to the repo
+     - integrate with the GitHub account to start the build process as soon as changes are committed to the repo
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/e85cd60c-9dd0-43db-91ce-980d38d8321a)
      - the build now takes longer than the previous one because of this integration
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/64282678-557c-4d01-b929-64dceabd0f69)
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/79e8bcdf-e948-4a1b-af37-aa5970727bb0)
 
-     - added new branch "jenkins-job", create test.sh script to print npm version
+     - added new branch "jenkins-job", created test.sh script to print npm version
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/aced8685-535b-462b-b226-26ebedfbeb40)
 
-     - build this branch in jenkins
+     - build this branch in Jenkins
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/dd95a084-565c-4d74-9cd8-17f0419342a5)
-     - in the shell command give execute permission to jenkins user to run test.sh
+     - in the shell command give execute permission to Jenkins user to run test.sh
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/b74b13f3-0065-4593-b4bf-0cf6c8ffc645)
      - run the build
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/1e1760a1-7dfe-4506-9b02-e9013b714c64)
