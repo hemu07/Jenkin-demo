@@ -16,12 +16,12 @@
     
   - For this, we need the installation of docker on the server
   - `sudo apt update`
-  - sudo apt install docker.io
+  - `sudo apt install docker.io`
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/99c93d15-0b45-4d36-bcda-8886b79e6c9d)
     
   - By default, the Docker daemon socket is only accessible to users in the "docker" group. You can add your current user to this group using the following command:
-  - sudo usermod -aG docker $USER
-  - docker login
+  - `sudo usermod -aG docker $USER`
+  - `docker login`
   - enter username & password or PAT to login
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/33abb65a-099e-426e-bd57-c91978f45ca5)
     
