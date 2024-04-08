@@ -26,6 +26,8 @@
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/33abb65a-099e-426e-bd57-c91978f45ca5)
     
   - Starting Jenkins on the server
+    `sudo docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins`
+    
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/735ff21e-a5b3-4e5b-a945-bd80a52d8062)
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/fa3361bd-1647-4913-9292-ecc2ed9122cf)
 
@@ -33,6 +35,7 @@
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/8446bafc-b637-489e-ae95-2dcbe9f5cf15)
  
   - setup password by giving the initial password stored at the location mentioned in the UI
+    `cat /var/volume_name/secrets/initialadminpassword`
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/2a01d301-82c4-49dd-b20a-0c23406ebbe5)
 
   - when we log in to the Jenkins container --> we are logged in as a Jenkins user instead of a root user as by default Jenkins is started as a Jenkins user (security best practice)
@@ -45,6 +48,7 @@
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/6bcd11bb-0f97-447e-8b58-18f869107b8e)
 
   - inspect the Jenkins mount volume location
+    `docker volume inspect jenkins_home`
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/9facf09a-3f89-4880-a523-3740193725a3)
 
   - we can manage and configure build tools and package managers from the Tools tab under the manage Jenkins option:
@@ -58,6 +62,8 @@
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/bf7a7682-e13e-48d8-825b-92fc53ac28fc)
 
   - download node: https://deb.nodesource.com/
+    `curl -fsSL https://deb.nodesource.com/setup_20.x | bash -`
+    `sudo apt-get install -y nodejs`
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/6354baa0-a8d5-47ea-aaba-c237c9c89dda)
 
     apt-get install -y nodejs
