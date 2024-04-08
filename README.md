@@ -1,4 +1,4 @@
-![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/25e78781-581d-4401-9fdd-6848b99a760b)### Jenkins-demo
+### Jenkins-demo
 
  Jenkins application starts on port 8080
  
