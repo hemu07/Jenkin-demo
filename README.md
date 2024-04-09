@@ -1,4 +1,4 @@
-### Jenkins-demo
+![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/72277d40-5f39-457a-b716-eef17f5ac88b)### Jenkins-demo
 
  Jenkins starts on port 8080 by default
  
@@ -93,6 +93,17 @@
      - run the build
        ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/1e1760a1-7dfe-4506-9b02-e9013b714c64)
 
+    - to run and build docker artifacts inside jenkins , we need to make docker available inside the jenkins container
+      `docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins/jenkins`
+      these two volumes make docker commands available inside the jenkins container
 
-    
+    - now we have docker commands available inside the jenkins container
+      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/ee95e81c-a2a0-4f2b-a889-0abafe0ec474)
+
+    - the jenkins service user doesnt have permission to read, execute docker commands yet
+      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/24b617f0-5756-4d64-873c-85514ca2fb2a)
+      now we are able to execute all the docker commands in the jenkins container
+      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/6e94a6e1-0ee0-44e3-98f6-6ad25e38c45f)
+
+      
 
