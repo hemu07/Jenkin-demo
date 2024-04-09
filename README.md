@@ -1,4 +1,4 @@
-![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/72277d40-5f39-457a-b716-eef17f5ac88b)### Jenkins-demo
+### Jenkins-demo
 
  Jenkins starts on port 8080 by default
  
