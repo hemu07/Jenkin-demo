@@ -107,6 +107,9 @@
 
    - Running a simple test from maven plugin
    - we integrate the git repo, give the branch name where the code is pushed recently , run maven test (runs a simple test file ) and maven package (packages if test is successful into a jar file)
+     git repo:
+     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/b6ba7d23-9c22-4128-a2b1-60245754a519)
+
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/8db767f8-b050-45bd-9593-608f03d56477)
 
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/1382aa51-299c-4fc5-9dc7-5e05a1669f6f)
@@ -114,5 +117,5 @@
      build results:
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/5118f9ca-4a21-40c4-921d-daf6006846e1)
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/bad68ae6-ab12-44e3-8fd9-1f7e5730ce5c)
-     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/ca9704f9-6a0d-4e99-863a-a50ffd180c36)
+
 
