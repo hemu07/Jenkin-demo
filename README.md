@@ -118,4 +118,11 @@
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/5118f9ca-4a21-40c4-921d-daf6006846e1)
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/bad68ae6-ab12-44e3-8fd9-1f7e5730ce5c)
 
+- To make docker available inside the jenkins container, (docker commands avaible while building jobs), we need to mount docker runtime directory from the server/local host to the jenkins container as a volume
+  ie(need to mount additional two volumes: docker volume and docker runtime volume (cmds gets executed from here/ docker executable binary location)
 
+  ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/8c94d7b1-c4d9-484e-b53d-9d6e4ac0e035)
+
+- Add permission to jenkins user to execute docker commands
+  ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/a4fa3cfe-f3e3-4bf9-a911-52b8782643ae)
+ 
