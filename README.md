@@ -1,4 +1,4 @@
-### Jenkins-demo
+![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/23497a04-4527-4547-a91d-2be68a1fd554)### Jenkins-demo
 
  Jenkins starts on port 8080 by default
  
@@ -100,10 +100,18 @@
     - now we have docker commands available inside the jenkins container
       ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/ee95e81c-a2a0-4f2b-a889-0abafe0ec474)
 
-    - the jenkins service user doesnt have permission to read, execute docker commands yet
+    - the Jenkins service user doesnt have permission to read, execute docker commands yet
       ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/24b617f0-5756-4d64-873c-85514ca2fb2a)
       now we are able to execute all the docker commands in the jenkins container
       ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/6e94a6e1-0ee0-44e3-98f6-6ad25e38c45f)
 
-      
+   - Running a simple test from maven plugin
+   - we integrate the git repo, give the branch name where the code is pushed recently , run maven test (runs a simple test file ) and maven package (packages if test is successful into a jar file)
+     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/8db767f8-b050-45bd-9593-608f03d56477)
+
+     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/1382aa51-299c-4fc5-9dc7-5e05a1669f6f)
+
+     build results:
+     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/5118f9ca-4a21-40c4-921d-daf6006846e1)
+     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/bad68ae6-ab12-44e3-8fd9-1f7e5730ce5c)
 
