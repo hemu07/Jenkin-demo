@@ -118,7 +118,7 @@
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/5118f9ca-4a21-40c4-921d-daf6006846e1)
      ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/bad68ae6-ab12-44e3-8fd9-1f7e5730ce5c)
 
-- To make docker available inside the jenkins container, (docker commands available while building jobs), we need to mount docker runtime directory from the server/local host to the jenkins container as a volume
+- To make docker available inside the jenkins container, (docker commands available while building jobs), we need to mount the docker runtime directory from the server/local host to the jenkins container as a volume
   ie(need to mount additional two volumes: docker volume and docker runtime volume (cmds gets executed from here/ docker executable binary location)
 
   ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/8c94d7b1-c4d9-484e-b53d-9d6e4ac0e035)
@@ -130,12 +130,28 @@
   ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/354ca253-258f-4973-9024-8c8879169b2e)
 
   - lets try other way:
-  - Creating a custom Jenkins image, that installs docker and makes it available inside jenkins container as root user
-  - build and run this image, access the jenkins again
+  - install docker cli inside the jenkins conatiner using below documentation, did
+  - https://www.jenkins.io/doc/book/installing/docker/
  
   - now after exec in the jenkins container, we are able to use docker cmd now
   - adding docker commands in job config now
-  - 
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/900c33a5-b771-41a5-b9fa-7effe2c26957)
+    
+  - add docker hub creds in jenkins
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/877db33a-7bdc-4104-9028-7c67dedd4916)
 
-  - 
+  - use the creds to login to docker hub for pushing the image
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/c462469b-4e0a-496f-8ee4-c862207a3cf2)
+
+  - add docker commands in job to build and push the image
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/22d56d6b-60c0-4921-ad02-fb61173c5332)
+
+  - pushed successfully
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/857a80da-c08e-4b8e-bee8-8b37bf6098a3)
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/845438b7-243f-4de4-847d-591a6c59fa96)
+
+  -  we see a warning to secure creds, so we now give the password as stdin inplace of cli parameter
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/99d8538a-23e5-4ba7-ba35-db1622eac574)
+    ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/d4f5ebfe-1110-44a1-bfa1-bdabd740f6f2)
+
  
