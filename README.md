@@ -129,11 +129,23 @@
   -- not working, getting docker cli not found error
   ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/354ca253-258f-4973-9024-8c8879169b2e)
 
+- stop the jenkins container and run `docker run -p 8080:8080 -p 50000:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_home:/var/jenkins_home jenkins/jenkins`
+- login to the jenkins container and install docker `docker exec -it — user root <container id> /bin/bash`
+- installing docker `curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall`
+- The above command downloads and executes the Docker rapid installation script from https://get.docker.com/, which further installs Docker within the container.
+- adding sufficient permissions to execute docker commands as jenkins service user
+  `sudo chmod 666 /var/run/docker.sock`
+-  login as jenkins user and try to run `docker run hello-world`
+  ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/dfacd0ba-d6b8-4244-ad91-57bda1951a51)
+
+ **ignore**
   - lets try other way:
   - install docker cli inside the jenkins conatiner using below documentation, did
   - https://www.jenkins.io/doc/book/installing/docker/
  
   - now after exec in the jenkins container, we are able to use docker cmd now
+  **ignore**
+    
   - adding docker commands in job config now
     ![image](https://github.com/hemu07/Jenkins-demo/assets/90203539/900c33a5-b771-41a5-b9fa-7effe2c26957)
     
